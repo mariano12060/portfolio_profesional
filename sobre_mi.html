@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description"
+        content="Sobre mí - Mariano Martinez, desarrollador web especializado en soluciones personalizadas.">
+    <meta name="keywords" content="desarrollador web, habilidades, sobre mí">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dosis:wght@200..800&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Dosis:wght@200..800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Comforter&family=Dosis:wght@200..800&family=Philosopher:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="sobre_mi.css">
+    <link rel="icon" href="./img/20230928_172720.jpg">
+    <title>Sobre Mí | Mariano Martinez</title>
+</head>
+
+<body class="style-default">
+    <header>
+        <nav>
+            <a href="https://www.instagram.com/crafter_forge" target="_blank" class="logo">
+                Craftercode-forge<br>by Mariano Martinez
+                <ion-icon name="checkmark-circle-sharp" class="logo-icon"></ion-icon>
+            </a>
+            <ion-icon name="reorder-four" class="nav-toggle"></ion-icon>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="sobre_mi.html">Sobre Mí</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about-me">
+        <div class="intro">
+            <img src="./img/20230928_172720.jpg" alt="Mariano Martinez" class="profile-pic">
+            <h1>Te cuento un poco sobre mi.</h1>
+            <!-- Nuevo contenido agregado -->
+            <section class="skills-highlight">
+                <h2>Desarrollador Web Full Stack especializado en crear soluciones a medida</h2>
+                <p>Soy un desarrollador web full stack comprometido con la creación de experiencias digitales
+                    excepcionales y personalizadas para cada cliente. Con una sólida formación en HTML5, CSS3,
+                    JavaScript, y Python, junto con experiencia en frameworks como Flask, bases de datos como MySQL y
+                    CMS como WordPress, me especializo en transformar ideas en productos digitales funcionales y escalables.</p>
+                <p><strong>Mi Compromiso:</strong> Mi enfoque es crear productos que no solo cumplan con los requisitos
+                    técnicos, sino que también superen las expectativas en términos de usabilidad, diseño y rendimiento.
+                    Mi dedicación al detalle y la capacidad para entender las necesidades de mis clientes me permiten
+                    entregar soluciones que realmente hacen la diferencia en sus negocios.</p>
+            </section>
+        </div>
+
+        <section class="skills">
+            <h2>Mis Habilidades</h2>
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <i class="fa-brands fa-html5"></i> <i class="fa-brands fa-css3-alt"></i> <i class="fa-brands fa-js"></i>
+                    <h3>HTML, CSS, JavaScript</h3>
+                    <p>Desarrollo web con tecnologías front-end para crear interfaces atractivas y funcionales.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-database"></i>
+                    <h3>MySQL</h3>
+                    <p>Gestión de bases de datos relacionales para almacenar y organizar datos de manera eficiente.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-python"></i> 
+                    <h3>Python, Flask</h3>
+                    <p>Desarrollo de aplicaciones web con Python y el framework Flask para soluciones backend.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-brands fa-wordpress"></i>
+                    <h3>WordPress</h3>
+                    <p>Creación y personalización de sitios web utilizando el popular CMS WordPress.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fa-solid fa-border-all"></i> <i class="fas fa-paint-brush"></i>
+                    <h3>Diseño Web Responsive</h3>
+                    <p>Diseño adaptable para proporcionar una experiencia óptima en dispositivos móviles y escritorios.</p>
+                </div>
+                <div class="skill-card">
+                    <i class="fas fa-shopping-cart"></i>
+                    <h3>Desarrollo de E-commerce</h3>
+                    <p>Implementación de soluciones para tiendas en línea con funcionalidad de carrito de compras.</p>
+                </div>
+            </div>
+        </section>
+        
+
+
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Craftercode-forge by Mariano Martinez. Todos los derechos reservados.</p>
+    </footer>
+
+    <div id="style-panel">
+        <button id="close-style-panel">Cerrar</button><br>
+        <h2>Selecciona un Estilo</h2>
+        <form>
+            <label>
+                <input type="radio" name="style" value="style-default" checked>
+                Estilo Vintage <i class="fa-solid fa-palette"></i>
+            </label>
+            <label>
+                <input type="radio" name="style" value="style-blue">
+                Estilo Shabby <i class="fa-solid fa-palette"></i>
+            </label>
+            <label>
+                <input type="radio" name="style" value="style-green">
+                Estilo Retro <i class="fa-solid fa-palette"></i>
+            </label>
+            <label>
+                <input type="radio" name="style" value="style-orange">
+                Estilo Profesional <i class="fa-solid fa-palette"></i>
+            </label>
+        </form>
+    </div>
+
+    <div id="style-icon">
+        <i class="fa-solid fa-wand-magic-sparkles"></i>
+    </div>
+
+    <script src="styleSwitcher.js"></script>
+    <script src="scripts.js"></script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+
+</html>

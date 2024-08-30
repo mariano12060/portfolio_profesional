@@ -1,0 +1,1383 @@
+/* General */
+::selection {
+    color: #040D12;
+    background: #11aa89;
+}
+
+body {
+    font-family: "Cinzel", serif;
+    margin: 0;
+    padding: 0;
+    color: #FFFFCC;
+    background-color: #040D12; /* Color de fondo original */
+    animation: slideIn 1s ease-out; /* Animación aplicada */
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+header {
+    background: #040D12; /* Gris oscuro */
+    color: #fff;
+    padding: 26px 0;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+nav .logo {
+    font-size: 17px;
+    font-weight: bold;
+    color: #FFFFCC;
+}
+
+.logo-icon {
+    justify-content: center;
+    margin: 0px;
+    color: #11aa89;
+}
+
+nav a:hover {
+    color: #A0522D;
+}
+
+nav ul {
+    font-family: "Dosis", sans-serif;
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 32px;
+}
+
+nav ul li a {
+    font-family: "Dosis", sans-serif;
+    font-size: 22px;
+    color: #11aa89; /* Gris claro */
+    padding: 15px 20px;
+    cursor: wait;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav ul li a:hover {
+    background: #040D12; /* Gris oscuro */
+    color: #11aa89;
+    border-bottom: 2px solid #53d4d463;
+}
+
+.intro {
+    text-align: center;
+    padding: 5px 20px 50px;
+    background: #040D12;
+    border-bottom: 0.5px solid #A0522D;
+}
+
+.intro h1 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-size: 60px;
+    margin-bottom: 5px;
+    color: #A0522D;
+}
+
+.intro p {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32px;
+    color: #FFFFCC;
+}
+
+.profile-pic {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/*habilidades claves*/
+.skills-highlight {
+    padding: 20px;
+    background: #040D12;
+    border-top: 1px solid #A0522D;
+    margin: 20px 0;
+}
+
+.skills-highlight h2 {
+    font-family: "Cinzel", serif;
+    font-size: 45px;
+    color: #FFFFCC;
+    margin-bottom: 15px;
+}
+
+.skills-highlight p {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: #FFFFCC;
+    line-height: 1.6;
+}
+
+
+/* Estilos para la sección de habilidades */
+.skills {
+    padding: 20px;
+    background: #040D12;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 32px;
+    color: #A0522D;
+    margin-bottom: 20px;
+}
+
+/* Estilos de la rejilla de habilidades */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+.skill-card {
+    background: #040D12;
+    color: #FFFFCC;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+    transform: scale(1.05);
+}
+
+.skill-card i {
+    font-size: 40px;
+    color: #A0522D;
+    margin-bottom: 10px;
+}
+
+.skill-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+
+/* Animación */
+@keyframes slideIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+footer {
+    background: #040D12; /* Gris oscuro */
+    color: #e0e0e0; /* Gris claro */
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 1px solid #A0522D;
+}
+
+footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Panel de selección de estilos */
+#style-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #a0512dcb;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 1000;
+}
+
+#style-panel.show {
+    transform: translateX(0);
+}
+
+#style-panel h2 {
+    margin-top: 0;
+}
+
+#style-panel button {
+    background: #FFFFCC;
+    color: #040D12;
+    border: 10px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+#style-panel form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Ícono de selección de estilos */
+#style-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #11aa89;
+    color: #040D12;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#style-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Cierre del panel de estilos */
+#close-style-panel {
+    display: block;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+/*.........................................................................................*/
+body.style-blue ::selection{
+    color: #ffffff;
+    background: #30aa11;
+}
+
+/* Estilo Azul */
+body.style-blue {
+    font-family: "Cinzel", serif;
+    margin: 0;
+    padding: 0;
+    color: #29282e;
+    background-color: #FAEDCE; /* Color de fondo original */
+    animation: slideIn 1s ease-out; /* Animación aplicada */
+}
+
+body.style-blue a{
+    text-decoration:wavy;
+    color:#080407;
+}
+
+body.style-blue header {
+    background: #FAEDCE;
+    color: #0a020c;
+    padding: 26px 0;
+}
+
+body.style-blue nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+body.style-blue nav .logo {
+    font-size: 17px;
+    font-weight: bold;
+    color: #45474B;
+}
+
+body.style-blue .logo-icon{
+    justify-content: center;
+    margin: 0px;
+    color: #30aa11;
+    
+}
+
+body.style-blue nav a:hover{
+    color: #973131;
+}
+
+body.style-blue nav ul {
+    font-family: "Dosis", sans-serif;
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+}
+
+body.style-blue nav ul li {
+    margin-left: 32px;
+}
+
+body.style-blue nav ul li a {
+    font-family: "Dosis", sans-serif;
+    font-size: 22px;
+    color: #379777; /* Gris claro */
+    padding: 15px 20px;
+    cursor: wait;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.style-blue nav ul li a:hover {
+    background: #FAEDCE; /* Gris oscuro */
+    color: #379777;
+    border-bottom: 2px solid #379777;
+}
+
+body.style-blue .intro {
+    text-align: center;
+    padding: 5px 20px 50px;
+    background: #FAEDCE;
+    border-bottom: 0.5px solid #973131;
+}
+
+body.style-blue .intro h1 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-size: 60px;
+    margin-bottom: 5px;
+    color:#973131;
+}
+
+body.style-blue .intro p {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32px;
+    color:#45474B;
+}
+
+body.style-blue .profile-pic {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+
+/*habilidades claves*/
+body.style-blue .skills-highlight {
+    padding: 20px;
+    background: #FAEDCE;
+    border-top: 1px solid #973131;
+    margin: 20px 0;
+}
+
+body.style-blue .skills-highlight h2 {
+    font-family: "Cinzel", serif;
+    font-size: 45px;
+    color: #45474B;
+    margin-bottom: 15px;
+}
+
+body.style-blue .skills-highlight p {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: #45474B;
+    line-height: 1.6;
+}
+
+
+/* Estilos para la sección de habilidades */
+body.style-blue .skills {
+    padding: 20px;
+    background: #FAEDCE;
+    text-align: center;
+}
+
+body.style-blue .skills h2 {
+    font-size: 32px;
+    color: #973131;
+    margin-bottom: 20px;
+}
+
+/* Estilos de la rejilla de habilidades */
+body.style-blue .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+body.style-blue .skill-card {
+    background: #FAEDCE;
+    color: #45474B;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+body.style-blue .skill-card:hover {
+    transform: scale(1.05);
+}
+
+body.style-blue .skill-card i {
+    font-size: 40px;
+    color: #973131;
+    margin-bottom: 10px;
+}
+
+body.style-blue .skill-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+body.style-blue .skill-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/*footer*/
+body.style-blue footer {
+    background: #FAEDCE; /* Gris oscuro */
+    color: #45474B; /* Gris claro */
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 1px solid #973131;
+}
+
+body.style-blue footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Panel de selección de estilos */
+body.style-blue #style-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #973131d3;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 1000;
+}
+
+body.style-blue #style-panel.show {
+    transform: translateX(0);
+}
+
+body.style-blue #style-panel h2 {
+    margin-top: 0;
+    color: #29282e;
+}
+
+body.style-blue #style-panel button {
+    background: #eca176;
+    color: #fff;
+    border:10px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+body.style-blue #style-panel form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Ícono de selección de estilos */
+body.style-blue #style-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: #379777;
+    color: #fcfcfc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+body.style-blue #style-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Cierre del panel de estilos */
+body.style-blue #close-style-panel {
+    display: block;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+/*---------------------------------------------------------------------------------------------------*/
+/*estilo verde*/
+body.style-green ::selection{
+    color: #030303;
+    background: #FAEDCE;
+}
+
+body.style-green {
+    font-family: "Cinzel", serif;
+    margin: 0;
+    padding: 0;
+    color: #503C3C;
+    background: #503C3C;
+    animation: slideIn 1s ease-out; /* Animación aplicada */
+}
+
+body.style-green a{
+    text-decoration:wavy;
+    color:#FAEDCE;
+}
+
+body.style-green header {
+    background: #503C3C;
+    color: #FAEDCE;
+    padding: 26px 0;
+}
+
+body.style-green nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+body.style-green nav .logo {
+    font-size: 17px;
+    font-weight: bold;
+    color: #FAEDCE;
+}
+
+body.style-green .logo-icon{
+    justify-content: center;
+    margin: 0px;
+    color: hwb(12 29% 33%);
+    
+}
+
+body.style-green nav a:hover{
+    color: #000000;
+}
+
+body.style-green nav ul {
+    font-family: "Dosis", sans-serif;
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+}
+
+body.style-green nav ul li {
+    margin-left: 32px;
+}
+
+body.style-green nav ul li a {
+    font-family: "Dosis", sans-serif;
+    font-size: 22px;
+    color: #FAEDCE; /* Gris claro */
+    padding: 15px 20px;
+    cursor:progress;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.style-green nav ul li a:hover {
+    background-color:#503C3C;
+    color: #bbbba6;
+    border-bottom: 2px solid #bbbba6;
+}
+
+body.style-green .intro {
+    text-align: center;
+    padding: 5px 20px 50px;
+    background: #503C3C;
+    border-bottom: 0.5px solid #FAEDCE;
+}
+
+body.style-green .intro h1 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-size: 60px;
+    margin-bottom: 5px;
+    color:#FAEDCE;
+}
+
+body.style-green .intro p {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32px;
+    color:#FED8B1;
+}
+
+body.style-green .profile-pic {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+
+/*habilidades claves*/
+body.style-green .skills-highlight {
+    padding: 20px;
+    background: #503C3C;
+    border-top: 1px solid #FED8B1;
+    margin: 20px 0;
+}
+
+body.style-green .skills-highlight h2 {
+    font-family: "Cinzel", serif;
+    font-size: 45px;
+    color: hwb(12 29% 33%);
+    margin-bottom: 15px;
+}
+
+body.style-green .skills-highlight p {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: #FED8B1;
+    line-height: 1.6;
+}
+
+/* Estilos para la sección de habilidades */
+body.style-green .skills {
+    padding: 20px;
+    background: #503C3C;
+    text-align: center;
+}
+
+body.style-green .skills h2 {
+    font-size: 32px;
+    color: #FED8B1;
+    margin-bottom: 20px;
+}
+
+/* Estilos de la rejilla de habilidades */
+body.style-green .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+body.style-green .skill-card {
+    background: #503C3C;
+    color: #FED8B1;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+body.style-green .skill-card:hover {
+    transform: scale(1.05);
+}
+
+body.style-green .skill-card i {
+    font-size: 40px;
+    color: hwb(12 29% 33%);
+    margin-bottom: 10px;
+}
+
+body.style-green .skill-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+body.style-green .skill-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/*footer*/
+body.style-green footer {
+    background: #503C3C; /* Gris oscuro */
+    color: #FAEDCE; /* Gris claro */
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 1px solid #FAEDCE;
+}
+
+body.style-green footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Panel de selección de estilos */
+body.style-green #style-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #faedcecc;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 1000;
+}
+
+body.style-green #style-panel.show {
+    transform: translateX(0);
+}
+
+body.style-green #style-panel h2 {
+    margin-top: 0;
+    color: #503C3C;
+}
+
+body.style-green #style-panel button {
+    background: #eca176;
+    color: #fff;
+    border:10px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+body.style-green #style-panel form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Ícono de selección de estilos */
+body.style-green #style-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background: hwb(12 29% 33%);
+    color: #fcfcfc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+body.style-green #style-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Cierre del panel de estilos */
+body.style-green #close-style-panel {
+    display: block;
+    color: #e9b58b;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+/*....................................................................................................*/
+/* Estilo Naranja */
+body.style-orange ::selection{
+    color: #ffffff;
+    background: #222831;
+}
+
+body.style-orange {
+    font-family: "Cinzel", serif;
+    margin: 0;
+    padding: 0;
+    color: #222831;
+    background: #ffffff;
+    animation: slideIn 1s ease-out; /* Animación aplicada */
+}
+
+body.style-orange a{
+    text-decoration:wavy;
+    color:#222831;
+}
+
+body.style-orange header {
+    background: #ffffff;
+    color: #222831;
+    padding: 26px 0;
+}
+
+body.style-orange nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 1rem;
+}
+
+body.style-orange nav .logo {
+    font-size: 17px;
+    font-weight: bold;
+    color: #a02334f6;
+}
+
+body.style-orange .logo-icon{
+    justify-content: center;
+    margin: 0px;
+    color: hwb(180 5% 22%);
+    
+}
+
+body.style-orange nav a:hover{
+    color: #222831;
+}
+
+body.style-orange nav ul {
+    font-family: "Dosis", sans-serif;
+    list-style: none;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+}
+
+body.style-orange nav ul li {
+    margin-left: 32px;
+}
+
+body.style-orange nav ul li a {
+    font-family: "Dosis", sans-serif;
+    font-size: 22px;
+    color: #222831; /* Gris claro */
+    padding: 15px 20px;
+    cursor:progress;
+    transition: background 0.3s, color 0.3s;
+}
+
+body.style-orange nav ul li a:hover {
+    background-color:#ffffff;
+    color: #a02334f6;
+    border-bottom: 2px solid #a02334f6;
+}
+
+body.style-orange .intro {
+    text-align: center;
+    padding: 5px 20px 50px;
+    background: #ffffff;
+    border-bottom: 0.5px solid #222831;
+}
+
+body.style-orange .intro h1 {
+    font-family: "Cinzel", serif;
+    font-optical-sizing: auto;
+    font-size: 60px;
+    margin-bottom: 5px;
+    color:#222831;
+}
+
+body.style-orange .intro p {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    font-size: 32px;
+    color:#525252;
+}
+
+body.style-orange .profile-pic {
+    border-radius: 50%;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin-bottom: 20px;
+}
+
+/*habilidades claves*/
+body.style-orange .skills-highlight {
+    padding: 20px;
+    background: #ffffff;
+    border-top: 1px solid #222831;
+    margin: 20px 0;
+}
+
+body.style-orange .skills-highlight h2 {
+    font-family: "Cinzel", serif;
+    font-size: 45px;
+    color: #a02334f6;
+    margin-bottom: 15px;
+}
+
+body.style-orange .skills-highlight p {
+    font-family: "Philosopher", sans-serif;
+    font-weight: 500;
+    font-size: 28px;
+    color: #222831;
+    line-height: 1.6;
+}
+
+/* Estilos para la sección de habilidades */
+body.style-orange .skills {
+    padding: 20px;
+    background: #ffffff;
+    text-align: center;
+}
+
+body.style-orange .skills h2 {
+    font-size: 32px;
+    color: #222831;
+    margin-bottom: 20px;
+}
+
+/* Estilos de la rejilla de habilidades */
+body.style-orange .skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-items: center;
+}
+
+body.style-orange .skill-card {
+    background: #ffffff;
+    color: #222831;
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+
+    transition: transform 0.3s ease;
+}
+
+body.style-orange .skill-card:hover {
+    transform: scale(1.05);
+}
+
+body.style-orange .skill-card i {
+    font-size: 40px;
+    color: #a02334f6;
+    margin-bottom: 10px;
+}
+
+body.style-orange .skill-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+body.style-orange .skill-card p {
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/*footer*/
+body.style-orange footer {
+    background: #ffffff; /* Gris oscuro */
+    color: #222831; /* Gris claro */
+    padding: 2rem 1rem;
+    text-align: center;
+    border-top: 1px solid #222831;
+}
+
+body.style-orange footer p {
+    margin: 0;
+    font-size: 16px;
+}
+
+/* Panel de selección de estilos */
+body.style-orange #style-panel {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background: #e9e7e3cc;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    padding: 20px;
+    z-index: 1000;
+}
+
+body.style-orange #style-panel.show {
+    transform: translateX(0);
+}
+
+body.style-orange #style-panel h2 {
+    margin-top: 0;
+    color: #222831;
+}
+
+body.style-orange #style-panel button {
+    background: #eca176;
+    color: #fff;
+    border:10px;
+    padding: 8px;
+    cursor: pointer;
+}
+
+body.style-orange #style-panel form label {
+    display: block;
+    margin-bottom: 20px;
+}
+
+/* Ícono de selección de estilos */
+body.style-orange #style-icon {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    background:#a02334f6;
+    color: #fcfcfc;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 20px;
+    z-index: 1000;
+}
+
+body.style-orange #style-icon img {
+    width: 24px;
+    height: 24px;
+}
+
+/* Cierre del panel de estilos */
+body.style-green #close-style-panel {
+    display: block;
+    color: #e9b58b;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+/*...............................................................................................*/
+
+/* Dispositivos extra pequeños */
+@media (max-width: 600px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        color: #A0522D;      
+        font-size: 24px; /* Tamaño del icono */
+        width: 40px; /* Ancho del icono */
+        height: 50px; /* Alto del icono */
+        text-align:center;
+        line-height: 50px; /* Alineación vertical del icono */
+        position: absolute;
+        top: 5%;
+        left: 80%;
+        transform: translate(-50%, -50%); /* Centra el icono */
+    }
+
+    nav {
+        transform: translateX(0);
+    }
+
+    .nav-toggle.active + ul {
+        display: flex;
+    }
+
+    .intro h1 {
+        font-size: 40px;
+    }
+
+    nav ul li a:hover{
+        color: none;
+        background-color: none;
+        border-bottom:none;
+    }
+}
+
+/* Dispositivos pequeños */
+@media (min-width: 601px) and (max-width: 767px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        color: #A0522D;
+        font-size: 24px; /* Tamaño del icono */
+        width: 40px; /* Ancho del icono */
+        height: 50px; /* Alto del icono */
+        text-align: center;
+        line-height: 50px; /* Alineación vertical del icono */
+        position: absolute;
+        top: 15%;
+        left: 51%;
+        transform: translate(-50%, -50%); /* Centra el icono */
+    }
+
+    nav {
+        transform: translateX(0);
+    }
+
+    .nav-toggle.active + ul {
+        display: flex;
+    }
+
+    .intro h1 {
+        font-size: 40px;
+    }
+
+    nav ul li a:hover{
+        color: none;
+        background-color: none;
+        border-bottom:none;
+    }
+}
+
+/* Dispositivos medianos */
+@media (min-width: 768px) and (max-width: 991px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    .nav-toggle {
+        display: block;
+        cursor: pointer;
+        color: #A0522D;
+        font-size: 28px; /* Tamaño del icono */
+        width: 40px; /* Ancho del icono */
+        height: 50px; /* Alto del icono */
+        text-align: center;
+        line-height: 60px; /* Alineación vertical del icono */
+        position: absolute;
+        top: 15%;
+        left: 51%;
+        transform: translate(-50%, -50%); /* Centra el icono */
+    }
+
+    nav {
+        transform: translateX(0);
+    }
+
+    .nav-toggle.active + ul {
+        display: flex;
+    }
+
+    .intro h1 {
+        font-size: 40px;
+    }
+
+    nav ul li a:hover{
+        color: none;
+        background-color: none;
+        border-bottom:none;
+    }
+}
+
+/* Dispositivos grandes */
+@media (min-width: 992px) {
+    nav ul {
+        display: flex; /* Mostrar el menú de forma horizontal */
+    }
+
+    .nav-toggle {
+        display: none; /* Ocultar el icono en dispositivos grandes */
+    }
+}
+
+
+
+/* Estilo Azul, Verde y Naranja */
+
+/* Dispositivos extra pequeños */
+@media (max-width: 600px) {
+    body.style-blue nav ul,
+    body.style-green nav ul,
+    body.style-orange nav ul {
+        display: none;
+        flex-direction: column;
+    }
+
+    body.style-blue .nav-toggle {
+        color: #973131;
+        font-size: 24px;
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    body.style-green .nav-toggle {
+        color: #FAEDCE;
+        font-size: 24px;
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    body.style-orange .nav-toggle {
+        color: #a02334f6;
+        font-size: 24px;
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+}
+
+
+/* Dispositivos pequeños */
+@media (min-width: 601px) and (max-width: 767px) {
+    body.style-blue nav ul,
+    body.style-green nav ul,
+    body.style-orange nav ul {
+        display: none;
+    }
+
+    body.style-blue .nav-toggle {
+        color: #973131;
+        font-size: 24px;
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    body.style-green .nav-toggle {
+        color: #FAEDCE;
+        font-size: 24px;
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+
+    body.style-orange .nav-toggle {
+        color: #a02334f6;
+        font-size: 24px;
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        line-height: 50px;
+    }
+}
+
+
+/* Dispositivos medianos */
+@media (min-width: 768px) and (max-width: 991px) {
+    body.style-blue nav ul,
+    body.style-green nav ul,
+    body.style-orange nav ul {
+        display: none;
+    }
+
+    body.style-blue .nav-toggle {
+        color: #973131;
+        font-size: 28px;
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    body.style-green .nav-toggle {
+        color: #FAEDCE;
+        font-size: 28px;
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        line-height: 60px;
+    }
+
+    body.style-orange .nav-toggle {
+        color: #a02334f6;
+        font-size: 28px;
+        width: 40px;
+        height: 50px;
+        text-align: center;
+        line-height: 60px;
+    }
+}
+
+
+/* Dispositivos grandes */
+@media (min-width: 992px) {
+    body.style-blue nav ul,
+    body.style-green nav ul,
+    body.style-orange nav ul {
+        display: flex;
+    }
+
+    body.style-blue .nav-toggle,
+    body.style-green .nav-toggle,
+    body.style-orange .nav-toggle {
+        display: none;
+    }
+}
